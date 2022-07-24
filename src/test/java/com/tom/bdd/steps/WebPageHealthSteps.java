@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import com.tom.bdd.context.TestContext;
 import com.tom.pageObjects.HomePage;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,7 +23,7 @@ public class WebPageHealthSteps {
   }
 
   @Given("I am listening for Javascript errors")
-  public void i_Am_Listening_For_Javascript_Errors(){
+  public void i_Am_Listening_For_Javascript_Errors() {
     List<String> pageErrors = new ArrayList<>();
     testContext.getCurrentPage().onPageError(pageErrors::add);
     testContext.getScenarioContext().setContext(PAGE_ERRORS, pageErrors);
@@ -38,7 +37,7 @@ public class WebPageHealthSteps {
   }
 
   @When("I create a list of hyperlinks on the page")
-  public void i_Create_A_List_Of_HyperLinks(){
+  public void i_Create_A_List_Of_HyperLinks() {
     HomePage homePage = new HomePage(testContext.getCurrentPage());
     List<String> pageHyperLinks = homePage.getDepartmentHyperLinks();
     testContext.getScenarioContext().setContext(DEPARTMENT_HYPERLINKS, pageHyperLinks);
@@ -48,7 +47,7 @@ public class WebPageHealthSteps {
   @Then("I verify that the homepage department hyperlinks return valid status codes")
   public void i_Verify_Department_Hyperlinks() {
     List<String> pageHyperLinks = testContext.getScenarioContext().get(DEPARTMENT_HYPERLINKS);
-    for (String hyperlink : pageHyperLinks){
+    for (String hyperlink : pageHyperLinks) {
       int statusCode = testContext.getCurrentPage().navigate(hyperlink).status();
       assertThat(statusCode).satisfiesAnyOf(
           status -> assertThat(status).isEqualTo(200),

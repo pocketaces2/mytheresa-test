@@ -17,12 +17,12 @@ public class HomePage extends BasePage {
     departmentHRefLinks = page.locator("[class=\"meta-list-department\"] [href]");
   }
 
-  public List<String> getDepartmentHyperLinks(){
+  public List<String> getDepartmentHyperLinks() {
 
     List<ElementHandle> pageElementHandles = departmentHRefLinks.elementHandles();
     List<String> pageHyperLinks = new ArrayList<>();
 
-    for (ElementHandle elementHandle : pageElementHandles){
+    for (ElementHandle elementHandle : pageElementHandles) {
       pageHyperLinks.add(elementHandle.getAttribute("href"));
     }
 

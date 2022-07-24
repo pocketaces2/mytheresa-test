@@ -8,9 +8,8 @@ import org.slf4j.LoggerFactory;
 
 public abstract class BasePage {
 
-  Logger logger = LoggerFactory.getLogger(BrowserManager.class);
-
   protected final Page page;
+  Logger logger = LoggerFactory.getLogger(BrowserManager.class);
 
   public BasePage(Page page) {
     this.page = page;

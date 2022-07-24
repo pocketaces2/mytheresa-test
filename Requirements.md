@@ -11,21 +11,12 @@ Requirements checklist
 // Cover 1 of 3 test cases and explain how to do the others (or implement)
 //Push to repo
 
-
 # Test cases
 
 1. Javascript no errors + check expected status code
 2. Verify can log in to https://www.mytheresa.com/de_en/men.html
 3. Verify open PRs and output list of PR as CSV with name date and author
 
+# TODO:
 
-#TODO:
-
-
-commit
-
-
-Do basics test
-Do test case challenge
-Test the maven config thing again
 
