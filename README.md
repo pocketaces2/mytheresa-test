@@ -32,6 +32,7 @@ The output will be a cucumber report which will give a temporary link to view in
     
     Given there are around 1700 hyperlinks on the homepage I decided to just test the 4 links at the top of the page so the
     test completes in a timely fashion. Typically I would automate crawling through hyperlinks via the API rather than as a UI test.
+    The JS errors test actually sometimes fails on the production website due to JS errors.
 
 ### Test case 2 - test login functionality
 

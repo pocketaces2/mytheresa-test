@@ -2,14 +2,13 @@ package com.tom.pageObjects;
 
 import com.microsoft.playwright.Page;
 import com.tom.bdd.environment.Environment;
-import com.tom.bdd.managers.BrowserManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public abstract class BasePage {
 
   protected final Page page;
-  Logger logger = LoggerFactory.getLogger(BrowserManager.class);
+  Logger logger = LoggerFactory.getLogger(BasePage.class);
 
   public BasePage(Page page) {
     this.page = page;

@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class WebPageHealthSteps {
 
@@ -60,8 +61,11 @@ public class WebPageHealthSteps {
   @Then("I verify that there are no javascript errors on the men's section homepage")
   public void i_Verify_No_Javascript_Errors() {
     List<String> pageErrors = testContext.getScenarioContext().get(PAGE_ERRORS);
-    assertThat(pageErrors).isEmpty();
+    StringJoiner stringJoiner = new StringJoiner(" \n");
+    pageErrors.forEach(stringJoiner::add);
+    assertThat(pageErrors).withFailMessage(
+        "current page contains javascript errors, errors as follows: \n \n " + stringJoiner
+            .toString()).isEmpty();
   }
-
 
 }

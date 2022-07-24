@@ -5,7 +5,7 @@ package com.tom.bdd.environment;
  */
 public enum Environment {
   LOCAL("https://local.mytheresa.com/en-de"), TEST("https://test.mytheresa.com/en-de"),
-  STAGING("https://staging.mytheresa.com/en-de"), PROD("https://local.mytheresa.com/en-de");
+  STAGING("https://staging.mytheresa.com/en-de"), PROD("https://www.mytheresa.com/en-de");
 
   private static final String HOMEPAGE_ENDPOINT = "/men.html";
   private final String baseUrl;
