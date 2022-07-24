@@ -12,7 +12,7 @@ import java.util.Properties;
 public class ConfigManager {
 
   private static final String DEFAULT_CONFIG_FILE_BASE_PATH = "src/test/resources/com/tom/bdd/config/";
-  private static final String DEFAULT_CONFIG_FILE = "Chromium_Local_Config.properties";
+  private static final String DEFAULT_CONFIG_FILE = "Chromium_Prod_Config.properties";
 
   private static final ConfigManager configManager = new ConfigManager();
   private static String configFilePath;
