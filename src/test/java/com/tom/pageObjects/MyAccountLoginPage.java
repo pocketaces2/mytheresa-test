@@ -16,7 +16,6 @@ public class MyAccountLoginPage {
     this.page = page;
     this.emailAddressField = page.locator("[id=\"login-form\"]  [id=\"email\"]");
     this.passwordField = page.locator("[id=\"login-form\"]  [id=\"pass\"]");
-    ;
     this.accountLoginButton = page.locator("#qa-login-button  button");
   }
 

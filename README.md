@@ -21,16 +21,10 @@ Requirements checklist
 #TODO:
 
 Next
-==commit==
-Run code formatter
-==commit==
-test case 1 and 3
-isLoadedChecks - in constructor?
-Pageobjectmanager and managing pages
-Upon failure, screenshot and any debugging info
-java 1.8?
+test case 1
+    check for javascript errors
+    split out the steps as appropriate
 
-Modify notes for how to run and any caveats
 
 Notes:
 

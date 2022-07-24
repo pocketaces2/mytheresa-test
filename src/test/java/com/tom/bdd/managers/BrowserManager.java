@@ -30,7 +30,7 @@ public class BrowserManager {
         browser = playwright.firefox().launch((new LaunchOptions().setHeadless(false)));
       }
       case CHROME -> {
-        browser = playwright.chromium().launch((new LaunchOptions().setChannel("chrome")));
+        browser = playwright.chromium().launch((new LaunchOptions().setChannel("chrome")).setHeadless(false));
       }
       default -> {
         browser = playwright.chromium().launch((new LaunchOptions().setHeadless(false)));

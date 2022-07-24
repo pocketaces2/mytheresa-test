@@ -6,4 +6,5 @@ package com.tom.bdd.context;
  * scenario context.
  */
 public enum Context {
+  DEPARTMENT_HYPERLINKS, PAGE_ERRORS;
 }

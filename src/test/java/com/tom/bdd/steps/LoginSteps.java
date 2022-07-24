@@ -21,7 +21,7 @@ public class LoginSteps {
   }
 
   @Given("I am on the myAccount login page")
-  public void i_Am_On_The_myTheresa_HomePage() {
+  public void i_Am_On_The_myTheresa_MyAccount_Page() {
     //TEST CASE 2: Could go straight to myAccount URL here or use the flyout login box
     HomePage homePage = new HomePage(testContext.getCurrentPage());
     homePage.navigateToHomePage(testContext.getEnvironment());
