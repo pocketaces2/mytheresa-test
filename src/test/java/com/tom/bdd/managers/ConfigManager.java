@@ -1,7 +1,8 @@
 package com.tom.bdd.managers;
 
 
-import com.tom.bdd.enums.BrowserType;
+import com.tom.bdd.environment.BrowserType;
+import com.tom.bdd.environment.Environment;
 import com.tom.bdd.utils.ConfigFileReader;
 import java.util.Properties;
 
@@ -34,7 +35,7 @@ public class ConfigManager {
   public BrowserType getBrowserType() {
     String browserType = properties.getProperty("BROWSER");
 
-    switch (browserType.toUpperCase()){
+    switch (browserType.toUpperCase()) {
       case "FIREFOX" -> {
         return BrowserType.FIREFOX;
       }
@@ -45,12 +46,34 @@ public class ConfigManager {
         return BrowserType.CHROME;
       }
       default -> {
-        throw new IllegalArgumentException("Invalid or unsupported browser specified to run tests with, browser specified: " + browserType +
-        "see README for details how to specify this correctly");
+        throw new IllegalArgumentException(
+            "Invalid or unsupported browser specified to run tests with, browser specified: "
+                + browserType +
+                "see README for details how to specify this correctly");
       }
+    }
+  }
 
+    public Environment getEnvironmentType() {
+      String environmentType = properties.getProperty("ENVIRONMENT");
+
+      switch (environmentType.toUpperCase()){
+        case "LOCAL" -> {
+          return Environment.LOCAL;
+        }
+        case "STAGING" -> {
+          return Environment.STAGING;
+        }
+        case "TEST" -> {
+          return Environment.TEST;
+        }
+        default -> {
+          //Defaulting to prod as other URLs don't work/unreliable
+          return Environment.PROD;
+        }
+
+      }
     }
 
-  }
 
 }

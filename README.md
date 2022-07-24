@@ -21,20 +21,16 @@ Requirements checklist
 #TODO:
 
 Next
-Commit
-
-Later
-Config for local,staging,fte,prod via props - hookup to code
-Upon failure, screenshot and any debugging info
-Pageobjectmanager and managing pages
-Hookup scenario context
-close the playwright object upon end
+==commit==
 Run code formatter
-java docs
+==commit==
 test case 1 and 3
+isLoadedChecks - in constructor?
+Pageobjectmanager and managing pages
+Upon failure, screenshot and any debugging info
+java 1.8?
 
 Modify notes for how to run and any caveats
-Further investigation on how to deal with recaptcha link
 
 Notes:
 

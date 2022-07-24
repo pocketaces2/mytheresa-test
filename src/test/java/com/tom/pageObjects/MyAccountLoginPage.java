@@ -24,8 +24,9 @@ public class MyAccountLoginPage {
     passwordField.fill(password);
   }
 
-  public void clickAccountLoginButton(){
+  public MyAccountPage clickAccountLoginButton(){
     accountLoginButton.click();
+    return new MyAccountPage(page);
   }
 
 

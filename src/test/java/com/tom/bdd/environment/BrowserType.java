@@ -1,4 +1,5 @@
-package com.tom.bdd.enums;
+package com.tom.bdd.environment;
+
 
 public enum BrowserType {
   FIREFOX, CHROMIUM, CHROME;
