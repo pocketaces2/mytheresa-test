@@ -7,7 +7,7 @@ public abstract class BasePage {
 
   protected final Page page;
 
-  public BasePage (Page page){
+  public BasePage(Page page) {
     this.page = page;
   }
 

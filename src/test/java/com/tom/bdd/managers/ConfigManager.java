@@ -18,19 +18,20 @@ public class ConfigManager {
   private static String configFilePath;
   private Properties properties;
 
-  private ConfigManager(){
+  private ConfigManager() {
 
-    if (System.getProperty("configFile") != null){
+    if (System.getProperty("configFile") != null) {
       configFilePath = DEFAULT_CONFIG_FILE_BASE_PATH + System.getProperty("configFile");
-    }
-    else {
+    } else {
       configFilePath = DEFAULT_CONFIG_FILE_BASE_PATH + DEFAULT_CONFIG_FILE;
     }
 
     properties = ConfigFileReader.readProperties(configFilePath);
   }
 
-  public static ConfigManager getInstance(){ return configManager; }
+  public static ConfigManager getInstance() {
+    return configManager;
+  }
 
   public BrowserType getBrowserType() {
     String browserType = properties.getProperty("BROWSER");
@@ -54,26 +55,26 @@ public class ConfigManager {
     }
   }
 
-    public Environment getEnvironmentType() {
-      String environmentType = properties.getProperty("ENVIRONMENT");
+  public Environment getEnvironmentType() {
+    String environmentType = properties.getProperty("ENVIRONMENT");
 
-      switch (environmentType.toUpperCase()){
-        case "LOCAL" -> {
-          return Environment.LOCAL;
-        }
-        case "STAGING" -> {
-          return Environment.STAGING;
-        }
-        case "TEST" -> {
-          return Environment.TEST;
-        }
-        default -> {
-          //Defaulting to prod as other URLs don't work/unreliable
-          return Environment.PROD;
-        }
-
+    switch (environmentType.toUpperCase()) {
+      case "LOCAL" -> {
+        return Environment.LOCAL;
       }
+      case "STAGING" -> {
+        return Environment.STAGING;
+      }
+      case "TEST" -> {
+        return Environment.TEST;
+      }
+      default -> {
+        //Defaulting to prod as other URLs don't work/unreliable
+        return Environment.PROD;
+      }
+
     }
+  }
 
 
 }

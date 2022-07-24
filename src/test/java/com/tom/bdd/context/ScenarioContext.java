@@ -5,17 +5,16 @@ import java.util.Map;
 
 /**
  * Used for sharing test data between steps classes
- *
+ * <p>
  * Example usage would be:
- *
- * scenarioContext.setContext(Context.CHECKOUT_TOTAL, "$15.00);
- * scenarioContext.get(Context.CHECKOUT_TOTAL);
+ * <p>
+ * scenarioContext.setContext(Context.CHECKOUT_TOTAL, "$15.00); scenarioContext.get(Context.CHECKOUT_TOTAL);
  */
 public class ScenarioContext {
 
   private final Map<Context, Object> scenarioContext;
 
-  public ScenarioContext(){
+  public ScenarioContext() {
     scenarioContext = new EnumMap<Context, Object>(Context.class);
   }
 

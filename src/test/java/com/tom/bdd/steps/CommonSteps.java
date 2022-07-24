@@ -7,12 +7,12 @@ public class CommonSteps {
 
   TestContext testContext;
 
-  public CommonSteps(TestContext testContext){
+  public CommonSteps(TestContext testContext) {
     this.testContext = testContext;
   }
 
   @After
-  public void cleanUpEnvironment(){
+  public void cleanUpEnvironment() {
     testContext.closePlaywright();
   }
 

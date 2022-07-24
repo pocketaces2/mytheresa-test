@@ -9,10 +9,10 @@ import com.tom.bdd.managers.ConfigManager;
 
 
 /**
- * Main context object that allows for accessing and modifying test environment properties.
- * Test data specifically should be stored in the ScenarioContext object.
+ * Main context object that allows for accessing and modifying test environment properties. Test
+ * data specifically should be stored in the ScenarioContext object.
  *
- * @see  ScenarioContext
+ * @see ScenarioContext
  */
 public class TestContext {
 
@@ -23,7 +23,7 @@ public class TestContext {
 
   private final ScenarioContext scenarioContext;
 
-  public TestContext(){
+  public TestContext() {
     playwright = Playwright.create();
     BrowserManager browserManager = new BrowserManager(playwright);
     browserContext = browserManager.getBrowser().newContext();
@@ -32,8 +32,8 @@ public class TestContext {
     currentPage = browserContext.newPage();
   }
 
-  public void closePlaywright(){
-     playwright.close();
+  public void closePlaywright() {
+    playwright.close();
   }
 
   public BrowserContext getBrowserContext() {
@@ -44,7 +44,7 @@ public class TestContext {
     return environment;
   }
 
-  public Page getCurrentPage(){
+  public Page getCurrentPage() {
     return currentPage;
   }
 

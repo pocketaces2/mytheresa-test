@@ -7,10 +7,10 @@ public enum Environment {
   LOCAL("https://local.mytheresa.com/en-del"), TEST("https://test.mytheresa.com/en-de"),
   STAGING("https://staging.mytheresa.com/en-de"), PROD("https://local.mytheresa.com/en-de");
 
-  private final String baseUrl;
   private static final String HOMEPAGE_ENDPOINT = "/men.html";
+  private final String baseUrl;
 
-  Environment(String baseUrl){
+  Environment(String baseUrl) {
     this.baseUrl = baseUrl;
   }
 

@@ -12,19 +12,20 @@ public class MyAccountLoginPage {
   private final Locator accountLoginButton;
 
 
-  public MyAccountLoginPage(Page page){
+  public MyAccountLoginPage(Page page) {
     this.page = page;
     this.emailAddressField = page.locator("[id=\"login-form\"]  [id=\"email\"]");
-    this.passwordField = page.locator("[id=\"login-form\"]  [id=\"pass\"]");;
+    this.passwordField = page.locator("[id=\"login-form\"]  [id=\"pass\"]");
+    ;
     this.accountLoginButton = page.locator("#qa-login-button  button");
   }
 
-  public void enterAccountLoginDetails(String username, String password){
+  public void enterAccountLoginDetails(String username, String password) {
     emailAddressField.fill(username);
     passwordField.fill(password);
   }
 
-  public MyAccountPage clickAccountLoginButton(){
+  public MyAccountPage clickAccountLoginButton() {
     accountLoginButton.click();
     return new MyAccountPage(page);
   }
